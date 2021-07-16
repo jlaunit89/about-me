@@ -1,0 +1,15 @@
+* {
+    background-color:rgb(27, 38, 104);
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: red
+}
+
+ul {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
