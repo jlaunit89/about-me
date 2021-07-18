@@ -54,3 +54,27 @@ if(answerFive === 'yes' || answerFive === 'y') {
 }else {
     alert('Sorry, plese answer with a yes or no')
 }
+
+let attempts = 4;
+for (let i = 0; i < 4; i++) {
+  let Service1 = prompt('How many years did I serve in the Army?');
+  let Service2 = parseInt(Service1);
+  let Service3 = 8;
+  if (Service2 < Service3) {
+    alert('Sorry, that number is low.');
+  } else if (Service2 > Service3) {
+    alert('Sorry, that number is high.');
+  }
+  else if (Service2 === Service3) {
+    alert('That is correct! I served for 8 years.');
+    userScore++;
+    break;
+  }
+  else if(i === 4) {
+    alert(`Sorry! I served for ${Service3} years`);
+  }
+  attempts--;
+  alert(`That guess was not correct. You have ${attempts} attempts remaining`);
+}
+
+
