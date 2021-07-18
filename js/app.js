@@ -4,11 +4,14 @@ let username = prompt('What is your name?');
 //concatenates the user's response with the welcome message alert
 alert('Hello ' + username + '!' + ' Welcome!')
 
+let correctAnswers = 0;
+
 //Asks the first question
 let answerOne = prompt('Am I a Project Manager? Answer \'yes\'or\'no\'.').toLowerCase();
 //The 'if' function determines whether the user's answer meets the conditions of true or false and returns the alert specific to the answer
 if(answerOne === 'yes' || answerOne === 'y') {
     alert('That is correct. I am a Project Manager!');
+    correctAnswers++;
 }else if (answerOne === 'no' || answerOne === 'n') {
     alert('Sorry, You are wrong.');
 }else {
@@ -19,6 +22,7 @@ let answerTwo = prompt('Was I in the Army? Answer \'yes\'or\'no\'.').toLowerCase
 
 if(answerTwo === 'yes' || answerTwo === 'y') {
     alert('That is correct. I was in the Army!');
+    correctAnswers++;
 }else if (answerTwo === 'no' || answerTwo === 'n') {
     alert('Sorry, You are wrong.');
 }else {
@@ -29,6 +33,7 @@ let answerThree = prompt('Do I live in Bellevue? Answer \'yes\'or\'no\'.').toLow
 
 if(answerThree === 'yes' || answerThree === 'y') {
     alert('That is correct. I am an east-sider!');
+    correctAnswers++;
 }else if (answerThree === 'no' || answerThree === 'n') {
     alert('Sorry, You are wrong.');
 }else {
@@ -39,6 +44,7 @@ let answerFour = prompt('Am I a Patriots fan? Answer \'yes\'or\'no\'.').toLowerC
 
 if(answerFour === 'yes' || answerFour === 'y') {
     alert('That is correct. GO PATS!');
+    correctAnswers++
 }else if (answerFour === 'no' || answerFour === 'n') {
     alert('Sorry, You are wrong.');
 }else {
@@ -51,6 +57,7 @@ if(answerFive === 'yes' || answerFive === 'y') {
     alert('Sorry, that is incorrect.');
 }else if (answerFive === 'no' || answerFive === 'n') {
     alert('Correct. I do not have a college degree yet.')
+    correctAnswers++;
 }else {
     alert('Sorry, plese answer with a yes or no')
 }
@@ -67,7 +74,7 @@ for (let i = 0; i < 4; i++) {
   }
   else if (Service2 === Service3) {
     alert('That is correct! I served for 8 years.');
-    userScore++;
+    correctAnswers++;
     break;
   }
   else if(i === 4) {
@@ -77,4 +84,20 @@ for (let i = 0; i < 4; i++) {
   alert(`That guess was not correct. You have ${attempts} attempts remaining`);
 }
 
+let mySports = ['rugby', 'football', 'basketball'];
 
+
+for (let i=0; i<5; i++){
+    let myTeams = prompt('What is one of my top 3 sports to watch?').toLowerCase();
+    console.log(mySports)
+    if (myTeams === mySports[i]){
+        alert('That is correct!');
+        correctAnswers++;
+        break;
+    }else {
+        alert('That is incorrect. Please try again. You have ' +(5-i)+' attempts remaining.');
+    }
+}
+
+
+alert(`You answered ${correctAnswers} questions correct out of 7.`);
